@@ -59,7 +59,6 @@ public class CategoryController {
     @RequestMapping("admin_category_delete")
     public String delete(int id,HttpSession session) throws IOException {
         categoryService.delete(id);
-
         File  imageFolder= new File(session.getServletContext().getRealPath("img/category"));
         File file = new File(imageFolder,id+".jpg");
         file.delete();

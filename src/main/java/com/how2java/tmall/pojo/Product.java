@@ -19,6 +19,17 @@ public class Product {
 
     private Date createDate;
 
+    /*非数据库字段*/
+    private Category  category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     public Integer getId() {
         return id;
     }
