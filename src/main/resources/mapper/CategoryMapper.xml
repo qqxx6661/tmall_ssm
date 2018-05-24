@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.how2java.tmall.mapper.CategoryMapper">
+    <select id="list" resultType="Category">
+      select * from category order by id desc
+    </select>
+    <insert id="add" keyProperty="id" useGeneratedKeys="true" parameterType="Category">
+        insert into category (name) values (#{name})
+    </insert>
+    <delete id="delete">
+        delete from category where id = #{id}
+    </delete>
+    <select id="get" resultType="Category">
+        select * from category where id = #{id}
+    </select>
+    <update id="update" parameterType="Category" >
+        update category set name=#{name} where id=#{id}
+    </update>
+</mapper>
