@@ -1,7 +1,9 @@
 package com.how2java.tmall.pojo;
 
-public class Category {
+public class Property {
     private Integer id;
+
+    private Integer cid;
 
     private String name;
 
@@ -11,6 +13,14 @@ public class Category {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getCid() {
+        return cid;
+    }
+
+    public void setCid(Integer cid) {
+        this.cid = cid;
     }
 
     public String getName() {
