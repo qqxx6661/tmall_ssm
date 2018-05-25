@@ -35,7 +35,7 @@ public class PropertyServiceImpl implements PropertyService {
     }
 
     @Override
-    public List list(int cid) {
+    public List<Property> list(int cid) {
         PropertyExample example = new PropertyExample();
         example.createCriteria().andCidEqualTo(cid);
         example.setOrderByClause("id desc");

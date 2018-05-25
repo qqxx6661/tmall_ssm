@@ -11,6 +11,9 @@ public class OrderItem {
 
     private Integer number;
 
+    /*非数据库字段*/
+    private Product product;
+
     public Integer getId() {
         return id;
     }
@@ -49,5 +52,13 @@ public class OrderItem {
 
     public void setNumber(Integer number) {
         this.number = number;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }
