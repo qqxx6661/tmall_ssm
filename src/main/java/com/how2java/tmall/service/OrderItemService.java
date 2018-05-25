@@ -18,4 +18,6 @@ public interface OrderItemService {
 
     void fill(Order o);
 
+    int getSaleCount(int  pid);
+
 }
