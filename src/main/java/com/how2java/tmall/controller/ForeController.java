@@ -243,4 +243,33 @@ public class ForeController {
         model.addAttribute("ois", ois);
         return "fore/cart";
     }
+
+    @RequestMapping("forechangeOrderItem")
+    @ResponseBody
+    public String changeOrderItem( Model model, HttpSession session, int pid, int number) {
+        User user = (User)session.getAttribute("user");
+        if(null==user)
+            return "fail";
+
+        List<OrderItem> ois = orderItemService.listByUser(user.getId());
+        for (OrderItem oi : ois) {
+            if(oi.getProduct().getId().intValue()==pid){
+                oi.setNumber(number);
+                orderItemService.update(oi);
+                break;
+            }
+
+        }
+        return "success";
+    }
+
+    @RequestMapping("foredeleteOrderItem")
+    @ResponseBody
+    public String deleteOrderItem( Model model,HttpSession session,int oiid){
+        User user =(User)  session.getAttribute("user");
+        if(null==user)
+            return "fail";
+        orderItemService.delete(oiid);
+        return "success";
+    }
 }
