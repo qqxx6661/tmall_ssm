@@ -1,5 +1,7 @@
 # tmall_ssm
 
+> 本代码仓库后续不再更新，现有代码可用
+
 简介：模仿天猫商城页面，实现Java后端+JSP页面 
 
 实现功能： 
@@ -9,4 +11,3 @@
 
 特点：采用PageHelper进行分页，使用MybatisGenerator逆向
 
-网站演示：http://tmall.pricemonitor.online/tmall_ssm/forehome
